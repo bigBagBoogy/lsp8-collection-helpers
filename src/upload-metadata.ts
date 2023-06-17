@@ -29,7 +29,7 @@ async function uploadMetadata() {
     assets: []
   };
 
-  const metadataCID = await uploadJsonToPinata(JSON.stringify(metadata));
+  const metadataCID = await uploadJsonToPinata(JSON.stringify({LSP4Metadata: metadata}));
 
   console.log(`Metadata CID: ${metadataCID}`);
 }

@@ -1,4 +1,4 @@
-import {uploadImageToPinata, uploadJsonToPinata} from "./utils/deploy-to-ipfs";
+import {uploadImageToPinata, uploadJsonToPinata} from "./utils/upload-to-ipfs";
 import {getImageData} from "./utils/image-data";
 import {LSP4DigitalAssetMetadata} from "./types/lsp4-metadata";
 

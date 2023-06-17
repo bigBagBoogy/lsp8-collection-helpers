@@ -32,4 +32,4 @@ const fetchConvertMetadata = async (baseURI: string, tokenAmount: number) => {
 };
 
 
-fetchConvertMetadata('https://clonex-assets.rtfkt.com/', 1000);
+fetchConvertMetadata('https://clonex-assets.rtfkt.com/', 100);

@@ -10,9 +10,7 @@ This README will guide you on how to run this metadata deployment code. This cod
 
 Before you start, make sure Node.js and NPM are installed on your system.
 
-### Instructions
-
-#### Step 1: Set Up Your Environment Variables
+### Step 1: Set Up Your Environment Variables
 
 Create an account on [Pinata](https://www.pinata.cloud/) and create your API keys.
 Create a `.env` file in the root directory of your project. 
@@ -26,10 +24,10 @@ PINATA_API_KEY_SECRET=<your-pinata-secret-key>
 
 Replace `<your-pinata-api-key>` and `<your-pinata-secret-key>` with your actual Pinata API key and secret key, respectively.
 
-#### Step 2: Replace the Images
+### Step 2: Replace the Images
 Replace the existing images located in the ./assets/img/ directory with the ones you want to use. Ensure you replace both icon.png and banner.png. The image paths are defined in the code, and the current code assumes PNG format.
 
-#### Step 3: Edit the Metadata
+### Step 3: Edit the Metadata
 You will need to change the metadata to suit your needs. The LSP4DigitalAssetMetadata object in the code provides a template. Replace the description, links, and other fields as needed.
 
 For example:
@@ -48,7 +46,7 @@ const metadata: LSP4DigitalAssetMetadata = {
 };
 ```
 
-#### Step 4: Run the Code
+### Step 4: Run the Code
 Now you're ready to run the code. Use the following NPM command in your terminal:
 
 ```bash
@@ -61,9 +59,7 @@ If everything runs successfully, you will see a console log of the metadata's Co
 
 ## Feature 2: Fetching and Converting Metadata
 
-### Instructions
-
-#### Step 1: Set Up Your Environment Variables
+### Step 1: Set Up Your Environment Variables
 
 If the metadata you're trying to fetch and convert is an IPFS URI, you'll need to add an IPFS gateway to the `.env` with `IPFS_GATEWAY`. Your `.env` file should now look like this:
 
@@ -75,7 +71,7 @@ IPFS_GATEWAY=<your-ipfs-gateway>
 
 Replace <your-ipfs-gateway> with your actual IPFS gateway.
 
-#### Step 2: Set your configuration
+### Step 2: Set your configuration
 
 In the last line of [fetch-convert-metadata.ts](src/fetch-convert-metadata.ts), 
 change the `baseURI` to the URI of the metadata you want to fetch and convert, 
@@ -85,7 +81,7 @@ and amount of tokens to convert:
 fetchConvertMetadata(<baseURI>, <tokensNumber>);
 ```
 
-#### Step 3: Run the Code
+### Step 3: Run the Code
 
 Run the `fetchConvertMetadata` function by using the following NPM command in your terminal:
 
@@ -97,7 +93,23 @@ This command will trigger the `fetchConvertMetadata` function. It will fetch and
 
 If everything runs successfully, you will see a progress log of the metadata fetching and converting process.
 
-### Troubleshooting
+## Feat 3: Upload the metadata folder
+
+### Step 1: Set Up Your Environment Variables
+
+See the instructions in the previous sections.
+
+### Step 2: Put your files in the output folder
+
+Either run the previous script to generate metadata files, either add you custom files to the [./src/output/](./src/output/) folder.
+
+### Step 3: Run the code
+
+```bash
+npm run upload-output-folder
+```
+
+## Troubleshooting
 
 In case you encounter issues:
 

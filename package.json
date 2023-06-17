@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "upload-metadata": "ts-node src/upload-metadata"
+    "upload-metadata": "ts-node src/upload-metadata",
+    "fetch-convert-metadata": "ts-node src/fetch-convert-metadata"
   },
   "author": "",
   "license": "ISC",

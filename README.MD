@@ -109,6 +109,30 @@ Either run the previous script to generate metadata files, either add you custom
 npm run upload-output-folder
 ```
 
+## Feature 4: Deploying a Merkle Tree of Whitelisted Addresses
+
+This feature is for creating a Merkle Tree from a list of Ethereum addresses, and then uploading this to IPFS using Pinata. This can be used for whitelisting addresses in a decentralized manner.
+
+### Step 1: Create Your Whitelist
+
+Create a text file containing all the Ethereum addresses that you want to whitelist. The addresses should be one per line and in the text file [src/whitelist.txt](src/whitelist.txt).
+
+### Step 2: Set Up Your Environment Variables
+
+Just like in previous features, make sure your `.env` file is set up with your Pinata API keys.
+
+### Step 3: Run the Code
+
+To run the Merkle tree deployment script, use the following NPM command in your terminal:
+
+```bash
+npm run deploy-merkle
+```
+
+This command will trigger the `deploy-merkle` function. It will read the addresses from the whitelist file, convert them into a Merkle Tree, and upload the Merkle Tree to IPFS via Pinata.
+
+If everything runs successfully, you will see a console log of the Merkle Tree's Content Identifier (CID) on IPFS.
+
 ## Troubleshooting
 
 In case you encounter issues:
@@ -118,5 +142,6 @@ In case you encounter issues:
 - Make sure your metadata is correctly structured.
 - Ensure that your environment has the necessary dependencies installed (Node.js and NPM).
 - Check your IPFS gateway in your .env file if you're using the fetching and converting metadata feature.
+- Check your whitelist file if you're using the Merkle Tree deployment feature.
 
 Happy coding!

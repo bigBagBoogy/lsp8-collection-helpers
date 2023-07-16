@@ -6,7 +6,8 @@
   "scripts": {
     "upload-metadata": "ts-node src/upload-metadata",
     "upload-output-folder": "ts-node src/upload-output-folder",
-    "fetch-convert-metadata": "ts-node src/fetch-convert-metadata"
+    "fetch-convert-metadata": "ts-node src/fetch-convert-metadata",
+    "deploy-merkle": "ts-node src/deploy-merkle"
   },
   "author": "",
   "license": "ISC",

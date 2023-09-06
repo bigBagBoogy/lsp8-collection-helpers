@@ -10,4 +10,9 @@ git push -u origin main
 
 git remote set-url origin -->> https: foo
 
+check with `got remote -v`
+git commit -m "first commit"
+git branch -M main
+git push -u origin main
+
 # todo:⭐️

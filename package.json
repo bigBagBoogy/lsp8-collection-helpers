@@ -7,7 +7,11 @@
     "upload-metadata": "ts-node src/upload-metadata",
     "upload-output-folder": "ts-node src/upload-output-folder",
     "fetch-convert-metadata": "ts-node src/fetch-convert-metadata",
-    "deploy-merkle": "ts-node src/deploy-merkle"
+    "deploy-merkle": "ts-node src/deploy-merkle",
+    "hasher": "ts-node hasher.ts",
+    "hasherOfString": "ts-node hasherOfString.ts"   
+    
+    
   },
   "author": "",
   "license": "ISC",
